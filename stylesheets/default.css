@@ -1,3 +1,48 @@
 * {
-  background-color: red;
+font-family: 'Merriweather', serif;
+}
+
+a {
+  color: #1a3a54;
+}
+
+#main_header {
+  font-family: 'Lato', sans-serif;
+  font-size: 5em;
+  letter-spacing: 13px;
+  color: #1a3a54;
+  margin: 25px 0px 25px 100px;
+}
+
+#sidebar {
+  width: 150px;
+  margin-left: 100px;
+  position: absolute;
+
+}
+
+div > div > a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  line-height: 175%;
+  text-decoration: none;
+}
+
+/* positioning for my_picture on index/about page */
+/*#photo {
+  margin: 0;
+  padding: 0;
+}*/
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 6px;
+}
+
+#content {
+  background-color: #d0c9be;
+  width: 900px;
+  margin-left: 250px;
 }
