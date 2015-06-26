@@ -23,9 +23,8 @@ header {
 
 .sidebar {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
   color: black;
-  line-height: 220%;
+  line-height: 320%;
   float: left;
   width: 10%;
   margin-left: 4%;
@@ -47,7 +46,6 @@ section article h1 {
 
 section article h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
 }
 
 section article h4 {
