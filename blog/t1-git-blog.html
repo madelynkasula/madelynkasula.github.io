@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<head>
-  <title>Adventures in Version Control | Madelyn Kasula</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:300|Merriweather' rel='stylesheet' type='text/css'>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../stylesheets/blog_post_default.css">
+    <link href='http://fonts.googleapis.com/css?family=Karla|Montserrat|Open+Sans' rel='stylesheet' type='text/css'>
+    <title>adventures in version control | blog</title>
+  </head>
 
-<main>
-  <h1 id="main_header">madelyn kasula</h1>
+  <body>
+    <header>
+      <h1>madelyn kasula</h1>
+    </header>
 
-  <div id="sidebar">
-    <div><a href="http://madelynkasula.github.io/">about</a></div>
-    <div><a href="#">projects</a></div>
-    <div><a href="http://madelynkasula.github.io/blog.html">blog</a></div>
-    <div><a href="#">contact</a></div>
-    <div><a href="#">social</a></div>
-  </div>
+    <section class="sidebar">
+      <article>
+        <h2><a href="http://madelynkasula.github.io/">about</a></h2>
+        <h2><a href="#">projects</a></h2>
+        <h2><a href="http://madelynkasula.github.io/blog.html">blog</a></h2>
+        <h2><a href="#">contact</a></h2>
+        <h2><a href="#">social</a></h2>
+      </article>
+    </section>
 
-  <h1>Adventures in Version Control</h1>
-  <h2>Git and GitHub</h2>
-  <h4>14 June 2015</h4>
+    <section class="content">
+      <article>
+        <h1>adventures in version control</h1>
+        <h2>git and github</h2>
+        <h4>14 june 2015</h4>
+          <p>
+            <b>What are the benefits of version control?</b>
+            Version control allows you to track progress, makes collaboration easier, rollback to previous versions if needed (i.e., a bug was introduced, a feature was added that is no longer wanted, etc.), and save your skin if you somehow delete/ruin/burn your current progress by backing up your work. Without version control, you would be stuck if you had accidentally broken something in your code because it would be much more complicated to undo what you (or someone else) had done. Along with that, collaboration would be confusing as well--if the feature you're working on somehow affects someone else's feature that they just finished, you would have much more trouble rectifying the problems if you didn't have the most current version. Your code would work on the project you have, but if the new feature isn't incorporated, you're going to be going back and debugging for who knows how long.
+          </p>
 
-  <section id="content">
-    <p>
-      <b>What are the benefits of version control?</b>
-      Version control allows you to track progress, makes collaboration easier, rollback to previous versions if needed (i.e., a bug was introduced, a feature was added that is no longer wanted, etc.), and save your skin if you somehow delete/ruin/burn your current progress by backing up your work. Without version control, you would be stuck if you had accidentally broken something in your code because it would be much more complicated to undo what you (or someone else) had done. Along with that, collaboration would be confusing as well--if the feature you're working on somehow affects someone else's feature that they just finished, you would have much more trouble rectifying the problems if you didn't have the most current version. Your code would work on the project you have, but if the new feature isn't incorporated, you're going to be going back and debugging for who knows how long.
-    </p>
+          <p>
+            <b>How does git help you keep track of changes?</b>
+            You can keep track of changes by making commits as often as possible--create a feature branch for your work, merge it, and commit to git whenever you can. For example, when answering reflection questions for homework on git repositories, I created a branch called <i>repo-reflection</i> to start working on these questions. Once I answer the questions in my text file, I can commit these changes, merge my <i>repo-reflection</i> branch back into the main (master) branch, and delete the no-longer-needed feature branch. Now that I have changed my project, I can use <i>git log</i> to look at a nice synopsis of my work. This is why commit messages are so important--when I look at my git log, it shows each commit, which should be able to quickly tell me the history of my project. When your commit messages are good, you can track all changes on your project using this log to see your progress! Lesson: Write good commit messages. Or else.
+          </p>
 
-    <p>
-      <b>How does git help you keep track of changes?</b>
-      You can keep track of changes by making commits as often as possible--create a feature branch for your work, merge it, and commit to git whenever you can. For example, when answering reflection questions for homework on git repositories, I created a branch called <i>repo-reflection</i> to start working on these questions. Once I answer the questions in my text file, I can commit these changes, merge my <i>repo-reflection</i> branch back into the main (master) branch, and delete the no-longer-needed feature branch. Now that I have changed my project, I can use <i>git log</i> to look at a nice synopsis of my work. This is why commit messages are so important--when I look at my git log, it shows each commit, which should be able to quickly tell me the history of my project. When your commit messages are good, you can track all changes on your project using this log to see your progress! Lesson: Write good commit messages. Or else.
-    </p>
-
-    <p>
-      <b>Why use GitHub to store your code?</b>
-      GitHub is used so widely by developers and software companies because of its ease and usefulness. Storing your code on GitHub allows you to back up your projects easily, display your code for others to use/see (and vice versa), and makes virtual collaboration much easier! You can find open source projects to contribute to, work on your own projects with someone 700 miles away very easily by viewing the repository as a whole, and show your chops to companies looking to hire you. Now go ahead and back that code up.
-    </p>
-  </section>
-</main>
+          <p>
+            <b>Why use GitHub to store your code?</b>
+            GitHub is used so widely by developers and software companies because of its ease and usefulness. Storing your code on GitHub allows you to back up your projects easily, display your code for others to use/see (and vice versa), and makes virtual collaboration much easier! You can find open source projects to contribute to, work on your own projects with someone 700 miles away very easily by viewing the repository as a whole, and show your chops to companies looking to hire you. Now go ahead and back that code up.
+          </p>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>
