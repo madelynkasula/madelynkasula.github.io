@@ -56,6 +56,16 @@ code {
   background-color:#eeeeee;
 }
 
+#info {
+  position: relative;
+  float: left;
+}
+
+.twitter-timeline {
+  position: relative;
+  float: right;
+}
+
 footer {
   font-family: 'Open Sans', sans-serif;
   background-image: url("../imgs/background2.1.png");
