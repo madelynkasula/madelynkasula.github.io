@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../stylesheets/blog_post_default.css">
+    <link href='http://fonts.googleapis.com/css?family=Karla|Montserrat|Open+Sans' rel='stylesheet' type='text/css'>
+    <title>classes & methods | blog</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>madelyn kasula</h1>
+    </header>
+
+    <section class="sidebar">
+      <article>
+        <h2><a href="http://madelynkasula.github.io/">about</a></h2>
+        <h2><a href="http://madelynkasula.github.io/projects.html">projects</a></h2>
+        <h2><a href="http://madelynkasula.github.io/blog.html">blog</a></h2>
+        <h2><a href="http://madelynkasula.github.io/contact.html">contact</a></h2>
+        <h2><a href="http://madelynkasula.github.io/social.html">social</a></h2>
+      </article>
+    </section>
+
+    <section class="content">
+      <article>
+        <h1>classes & methods, or</h1>
+        <h2>how to make your cat do stuff</h2>
+        <h4>20 july 2015</h4>
+
+        <p>
+          As usual, I'm going to talk to you about my cat (because she's awesome), but this time it will be via classes in Ruby. Take a look at the Cat class below:
+        </p>
+
+        <img src="https://github.com/madelynkasula/madelynkasula.github.io/blob/master/imgs/cat_class_img.png?raw=true" />
+
+        <p>
+          We can see the cat will have name, gender, and color attributes. We used <code>attr_reader</code> because these are attributes that we do not want the class to be able to change--it can only view (or "read") them. We also need to initialize these variables in order to use them in our methods in the Cat class. Why do we need both, you ask? Using <code>attr_reader</code> allows other classes to access the values of these variables. So if I had a Dog class and the dog only chased cats named Spooky, I could create a new instance of the Cat class and call <code>cat.name</code> to determine whether this poor cat will be chased!
+        </p>
+
+        <p>
+          You'll notice that when I initialize my variables, I create instance variables as well. This allows all of the methods in my class to be able to access and do work on these variables. There is also a <code>@lazy</code> variable, which is not passed into the <code>initialize</code> method. That is because I do not need this information to be created with the new instance of my Cat class--I will work on it later. (I am also giving this cat the benefit of the doubt by initializing the variable to <code>false</code>, even though we know the cat is probably lazy.)
+        </p>
+
+        <p>
+          Now, we can create an instance of our Cat class, which is on line 34. The cat's name is Spooky, the cat's gender is female, and she is black and white in color (I prefer "tuxedo" as the phrase, but I suppose that isn't a color.) Again, because <code>@lazy</code> is not an argument that is passed into the <code>initialize</code> method, I only need to pass these three values in when I create a new cat. And that's how cats are made.
+        </p>
+
+        <p>
+          Let's make our cat do stuff! That's what our methods are for--forcing cats to do things they don't feel like doing. (Don't quote me on that.) You'll see we have three methods: <code>speak</code>, <code>is_lazy?</code>, and <code>play</code>. If, outside of our method (say, below line 34, since that is where we create <code>cat</code>), we were to call <code>cat.[method_name_here]</code>, we could get the cat to say "Meow!", determine whether or not the cat is lazy by answering, "What does your cat do all day?", or get the cat to play with some string (if she is not lazy, of course.)
+        </p>
+
+        <p>
+          Let's look at the variable <code>@lazy</code>. First, in line 8, we initialize the variable to <code>false</code>. Then, in our <code>is_lazy?</code> method, we change the value of <code>@lazy</code> if the cat's owner's answer includes the words "sleeps" or "lays around." If it doesn't, <code>@lazy</code> is still false (re-stating this on line 21 is unnecessary, but makes it explicit). Lastly, in the <code>play</code> method, if the value was changed to <code>true</code>, then the cat will not play with you and will give you a sassy response (ugh, as usual). This passing of the <code>@lazy</code> variable between different methods throughout our class is why we need it to be an instance variable. Otherwise, we would have to explicitly pass the variable by returning its value in the <code>is_lazy?</code> method (which just so happens to be true in this case), creating a variable that equals the return value of <code>is_lazy?</code>, and passing that variable into the <code>play</code> method. Sometimes this is what we want because it creates more control for certain variables. However, we want our entire class to be able to access <code>@lazy</code> so that everyone knows how lazy this cat is.
+        </p>
+
+        <p>
+          And there we have it! Our Cat class models our cat and some of her many wonderful attributes and contains methods to make her hang out with me. Maybe I will just continue messing with my Cat class since all she does is sleep (which means she's lazy, which means she won't play with me).
+        </p>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>
