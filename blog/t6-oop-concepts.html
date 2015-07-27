@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../stylesheets/blog_post_default.css">
+    <link href='http://fonts.googleapis.com/css?family=Karla|Montserrat|Open+Sans' rel='stylesheet' type='text/css'>
+    <title>variable scope in ruby | blog</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>madelyn kasula</h1>
+    </header>
+
+    <section class="sidebar">
+      <article>
+        <h2><a href="http://madelynkasula.github.io/">about</a></h2>
+        <h2><a href="http://madelynkasula.github.io/projects.html">projects</a></h2>
+        <h2><a href="http://madelynkasula.github.io/blog.html">blog</a></h2>
+        <h2><a href="http://madelynkasula.github.io/contact.html">contact</a></h2>
+        <h2><a href="http://madelynkasula.github.io/social.html">social</a></h2>
+      </article>
+    </section>
+
+    <section class="content">
+      <article>
+        <h1>variable scope in ruby</h1>
+        <h4>26 july 2015</h4>
+
+        <p>
+          In Ruby, there are several types of variables that have different degrees of visibility, or scope. This, for all intents and purposes, keeps your code from being too dependent upon or "knowing too much about" other parts of your code. Ruby has several types of variables, all with different scopes (shown with syntactical convention in parenthesis:
+        </p>
+
+        <p>
+          <li>Constant (VARIABLE_NAME)</li>
+          <li>Global ($variable_name)</li>
+          <li>Class (@@variable_name)</li>
+          <li>Instance (@variable_name)</li>
+          <li>Local (variable_name)</li>
+        </p>
+
+        <p>
+          Note that the list above is shown in order from largest to smallest visibility of code (i.e., your constant and global variables can see your entire program, whereas your local variables can only see the block of code in which they are contained).
+        </p>
+
+        <p>
+          Let's start at the top with constants and global variables. Both are visible throughout your entire body of code, however, using global variables is highly discouraged because, not only do they cause too many dependencies, they can be changed at any point in your code (this seems innocuous when your programs are small, but can become very dangerous). Constants, on the other hand, have the same scope or visibility, but cannot be changed once they are set to a value in your code (hence the fact that they are constants). Constants will be values that you are sure will (and should) never change; for example, the value of pi is a constant and is treated as such in Ruby.
+        </p>
+
+        <p>
+          Next down the line are class variables, which are denoted with "@@" before the variable name. This type of variable is visible to the entire class in which it is contained. If changed at any point in your class, the value for your class variable is changed in all instances in which it exists. More about this with instance variables.
+        </p>
+
+        <p>
+          Instance variables, shown with a single "@," are only changed when a certain instance does work on it. For example, if any object changes the value of an instance variable, the variable is only changed in association with that specific object--not all objects in that class. This is the main difference between class and instance variables; while multiple instances of an instance variable can exist, only one value for a class variable can exist at any given time.
+        </p>
+
+        <p>
+          Finally, for the smallest scoped variable--local variables. This variable type is only able to be accessed in the specific block of code in which it is contained. For example, when you write an #each iteration - <code>array.each { |index| puts index }</code> - the variable <code>index</code> used in the #each block only exists in that small block between the curly braces--everywhere else in my program it means nothing and has no value. The same goes for a method in which a local variable is used--that variable has meaning inside of your method, but if you try to access it in a different method, you will come to a frustrating roadblock.
+        </p>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>
