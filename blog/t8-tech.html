@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../stylesheets/blog_post_default.css">
     <link href='http://fonts.googleapis.com/css?family=Karla|Montserrat|Open+Sans' rel='stylesheet' type='text/css'>
-    <title>functional programming | blog</title>
+    <title>recursion in ruby | blog</title>
   </head>
 
   <body>
@@ -24,11 +24,21 @@
 
     <section class="content">
       <article>
-        <h1>functional programming</h1>
+        <h1>recursion in ruby</h1>
         <h4>9 august 2015</h4>
 
         <p>
+          A recursive method is a method that calls itself from within its own method definition. Much like a loop, it needs to have a way to break out of itself, as well as some sort of incrementor to prevent infinite looping. The break is referred to as a “base case” and will return out of the method if evaluated to true.
+        </p>
 
+        <p>
+          A cool example to visualize recursion is creating a simple countdown script in Ruby. I’m going to define a method countdown that takes a parameter (integer), representing the number to countdown from. The first thing to do is define the base case, so I will return out of the method if integer == 0. Then I <code>puts integer</code>, then tell the method to call itself, but to pass in the value of integer-1. There is nothing wrong with calling the method from within itself, because it will always test against the base case, and eventually return out of the method.
+        </p>
+
+        <img src="https://github.com/madelynkasula/madelynkasula.github.io/blob/master/imgs/recursive_method.png?raw=true"/>
+
+        <p>
+          This example is obviously over-simplified, but you can see the pattern. I can think of many cases where having a method call back to itself at a certain point, under certain conditions, etc. would be useful. However, I (being new to the idea of recursion) have trouble distinguishing when it would be best to use recursion versus a <code>while</code> loop (or any other fitting loop). This all comes with practice, but it is good to know the basics of recursion in order to start harnessing its power! (For good, of course.)
         </p>
       </article>
     </section>
