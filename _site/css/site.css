@@ -1,6 +1,14 @@
 body {
-  background-color: black;
-  font-family: 'Source Code Pro';
+  background-color: #0a0a0a;
+  font-family: 'Press Start 2P';
+}
+
+a {
+  text-decoration: none;
+  color: #5c4376;
+}
+
+a:hover {
   color: white;
 }
 
@@ -15,15 +23,26 @@ body {
   align-self: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Press Start 2P';
   line-height: 500%;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #5c4376;
+.select {
+  color: white !important;
+  animation: blink 1s infinite;
 }
 
-.nav a:hover {
-  color: white;
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.select:before {
+  content: '> ';
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
