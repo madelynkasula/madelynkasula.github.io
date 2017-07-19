@@ -13,6 +13,9 @@ $(document).ready(function() {
       case 'w':
         selectPrevious(selectedEl);
         break;
+      case 'Enter':
+        routeToPage(selectedEl.href);
+        break;
     }
   });
 
@@ -31,5 +34,9 @@ $(document).ready(function() {
       $(oldEl).removeClass('select');
       $(newEl).addClass('select');
     }
+  }
+
+  function routeToPage(url) {
+    window.location.href = url;
   }
 });
