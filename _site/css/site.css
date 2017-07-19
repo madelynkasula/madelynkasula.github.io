@@ -1,48 +1,48 @@
 body {
   background-color: #0a0a0a;
-  font-family: 'Press Start 2P';
-}
+  font-family: "Press Start 2P"; }
 
 a {
   text-decoration: none;
-  color: #5c4376;
-}
-
-a:hover {
-  color: white;
-}
+  color: #5c4376; }
 
 .container {
   height: 100vh;
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .nav {
   display: flex;
   align-self: center;
   align-items: center;
   flex-direction: column;
-  line-height: 500%;
-}
+  line-height: 500%; }
 
 .select {
-  color: white !important;
-  animation: blink 1s infinite;
-}
+  color: white;
+  animation: blink 1s infinite; }
+  .select:before {
+    content: '> '; }
 
 @keyframes blink {
   50% {
-    opacity: 0;
-  }
-}
-
-.select:before {
-  content: '> ';
-}
-
+    opacity: 0; } }
 #info {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
-}
+  color: #5c4376; }
+
+#info-text-1 {
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  color: grey;
+  font-size: 12px;
+  animation: fadeOut 1s 1; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

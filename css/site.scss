@@ -1,0 +1,73 @@
+---
+---
+
+// variables
+$primary-font: 'Press Start 2P';
+$darkest-grey: #0a0a0a;
+$purple: #5c4376;
+$info-btn-gutter: 10px;
+
+// styles
+body {
+  background-color: $darkest-grey;
+  font-family: $primary-font;
+}
+
+a {
+  text-decoration: none;
+  color: $purple;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 500%;
+}
+
+.select {
+  color: white;
+  animation: blink 1s infinite;
+
+  &:before {
+    content: '> ';
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#info {
+  position: absolute;
+  bottom: $info-btn-gutter;
+  right: $info-btn-gutter;
+  color: $purple;
+}
+
+#info-text-1 {
+  position: absolute;
+  bottom: $info-btn-gutter;
+  right: $info-btn-gutter + 25px;
+  color: grey;
+  font-size: 12px;
+  animation: fadeOut 1s 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
