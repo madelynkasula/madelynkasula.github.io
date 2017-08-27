@@ -48,3 +48,13 @@ body {
   .contact .spacer:after {
     content: '//';
     padding: 0px 20px; }
+
+#up-arrow {
+  display: none;
+  height: 0;
+  position: sticky;
+  top: 15px;
+  left: 100vw;
+  padding-right: 15px;
+  font-size: 30px;
+  color: #D7C6CF; }

@@ -7,6 +7,7 @@ $sans-serif: 'Montserrat';
 $blue: #015560;
 $green: #8CABA8;
 $pink: #EBDADA;
+$purple: #D7C6CF;
 $dark-pink: #A2798F;
 $black: #151617;
 $white: white;
@@ -79,4 +80,15 @@ body {
     content: '//';
     padding: 0px 20px;
   }
+}
+
+#up-arrow {
+  display: none;
+  height: 0;
+  position: sticky;
+  top: 15px;
+  left: 100vw;
+  padding-right: 15px;
+  font-size: 30px;
+  color: $purple;
 }
