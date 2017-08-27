@@ -20,7 +20,6 @@ body {
   .navbar a:hover {
     color: #EBDADA; }
   .navbar .links > a {
-    flex-shrink: 10;
     padding-left: 25px;
     font-size: 10px;
     letter-spacing: 3px; }
