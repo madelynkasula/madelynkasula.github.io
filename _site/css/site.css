@@ -5,6 +5,7 @@ body {
   color: #151617; }
 
 .navbar {
+  top: 0;
   margin: 20px 10px;
   display: flex;
   justify-content: space-between;
