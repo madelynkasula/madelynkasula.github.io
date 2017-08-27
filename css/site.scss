@@ -2,5 +2,78 @@
 ---
 
 // variables
+$serif: 'Lora';
+$sans-serif: 'Montserrat';
+$green: #4C6961;
+$pink: #E4C7C7;
+$black: #151617;
+$white: white;
 
 // styles
+body {
+  margin: 0;
+  font-family: $serif;
+  letter-spacing: 2px;
+  color: $black;
+}
+
+.navbar {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: $sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  a:hover {
+    color: $pink;
+  }
+
+  & .links > a {
+    padding-left: 25px;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.about {
+  color: $white;
+  background-color: $green;
+}
+
+.resume {
+  background-color: $pink;
+}
+
+.contact {
+  background-color: $black;
+  color: $white;
+
+  & a {
+    padding-right: 20px;
+    color: $white;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  .spacer:after {
+    content: '//';
+    padding: 0px 20px;
+  }
+}

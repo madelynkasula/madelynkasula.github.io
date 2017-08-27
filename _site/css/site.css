@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "Lora";
+  letter-spacing: 2px;
+  color: #151617; }
+
+.navbar {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px; }
+  .navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #151617; }
+  .navbar a:hover {
+    color: #E4C7C7; }
+  .navbar .links > a {
+    padding-left: 25px;
+    font-size: 10px;
+    letter-spacing: 3px; }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+.about {
+  color: white;
+  background-color: #4C6961; }
+
+.resume {
+  background-color: #E4C7C7; }
+
+.contact {
+  background-color: #151617;
+  color: white; }
+  .contact a {
+    padding-right: 20px;
+    color: white; }
+    .contact a:hover {
+      color: #E4C7C7; }
+  .contact .spacer:after {
+    content: '//';
+    padding: 0px 20px; }
