@@ -39,6 +39,7 @@ body {
   background-color: #EBDADA; }
 
 .contact {
+  flex-wrap: wrap;
   background-color: #A2798F;
   color: white; }
   .contact a {
@@ -46,9 +47,6 @@ body {
     color: white; }
     .contact a:hover {
       color: #EBDADA; }
-  .contact .spacer:after {
-    content: '//';
-    padding: 0px 20px; }
 
 #up-arrow {
   display: none;

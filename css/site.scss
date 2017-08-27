@@ -65,6 +65,7 @@ body {
 }
 
 .contact {
+  flex-wrap: wrap;
   background-color: $dark-pink;
   color: $white;
 
@@ -75,11 +76,6 @@ body {
     &:hover {
       color: $pink;
     }
-  }
-
-  .spacer:after {
-    content: '//';
-    padding: 0px 20px;
   }
 }
 
