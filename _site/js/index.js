@@ -1,10 +1,10 @@
 $(document).ready(() => {
-  const offset = 75
+  const scrollOffset = 75
   const sectionOffset = 45
   const duration = 500
 
   $(window).scroll(() => {
-    if ($(this).scrollTop() > offset) {
+    if ($(this).scrollTop() > scrollOffset) {
       $('#up-arrow').fadeIn(duration)
     } else {
       $('#up-arrow').fadeOut(0)
