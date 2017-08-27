@@ -4,8 +4,10 @@
 // variables
 $serif: 'Lora';
 $sans-serif: 'Montserrat';
-$green: #4C6961;
-$pink: #E4C7C7;
+$blue: #015560;
+$green: #8CABA8;
+$pink: #EBDADA;
+$dark-pink: #A2798F;
 $black: #151617;
 $white: white;
 
@@ -61,7 +63,7 @@ body {
 }
 
 .contact {
-  background-color: $black;
+  background-color: $dark-pink;
   color: $white;
 
   & a {
