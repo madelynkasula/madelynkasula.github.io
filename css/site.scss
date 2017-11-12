@@ -57,6 +57,10 @@ body {
 .about {
   color: $white;
   background-color: $green;
+
+  #intro {
+    max-width: 75vw;
+  }
 }
 
 .resume {
