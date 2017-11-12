@@ -36,6 +36,8 @@ body {
 
 .resume {
   background-color: #EBDADA; }
+  .resume > a {
+    color: #A2798F; }
 
 .contact {
   flex-wrap: wrap;
