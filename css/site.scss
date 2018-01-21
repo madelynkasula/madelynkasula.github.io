@@ -6,29 +6,34 @@
 $break-large: 1200px;
 
 // colors
-$white: #FFFFFF;
+$white: #F4F4F4;
 $black: rgba(0, 0, 0, 0.84);
 $yellow: rgb(255, 255, 0);
 
 // fonts
-$heading-font: 'Monserrat';
-$primary-font: 'Inconsolata';
-$primary-font-color: $black;
+$serif: 'Playfair Display';
+$monospace: 'Inconsolata';
 
 
 //// STYLES ////
 body {
   margin: 0;
-  font-family: $primary-font;
-  color: $primary-font-color;
+  font-family: $monospace;
+  color: $black;
+  background-color: $white;
 }
 
 h1, h2 {
-  font-family: $heading-font;
+  font-family: $serif;
 }
 
 h1 {
   font-size: 3em;
+}
+
+h3 {
+  font-family: $monospace;
+  font-size: 1.2em;
 }
 
 .menu-container {
@@ -54,7 +59,7 @@ h1 {
 }
 
 .menu-icon {
-  padding: 0.5em;
+  padding: 0.4em;
   cursor: pointer;
   color: $black;
   transition: all 1000ms;
@@ -115,5 +120,21 @@ h1 {
   &--title {
     background-color: $yellow;
     padding: 1em 2em;
+  }
+
+  &--content {
+   padding: 1em 2em;
+  }
+}
+
+.skills {
+  &--grid {
+    display: grid;
+    grid-gap: 2em;
+    font-family: $serif;
+
+    @media screen and (min-width: $break-large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
