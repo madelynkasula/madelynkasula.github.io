@@ -1,98 +1,93 @@
 ---
 ---
 
-// variables
-$serif: 'Lora';
-$sans-serif: 'Montserrat';
-$blue: #015560;
-$green: #8CABA8;
-$pink: #EBDADA;
-$purple: #D7C6CF;
-$dark-pink: #A2798F;
-$black: #151617;
-$white: white;
+// breakpoints
+$break-large: 1200px;
+
+// colors
+$white: #FFFFFF;
+$black: rgba(0, 0, 0, 0.84);
+$yellow: rgb(255, 255, 0);
+
+// fonts
+$heading-font: 'Monserrat';
+$primary-font: 'Inconsolata';
+$primary-font-color: $black;
+
+// borders, gutters, etc.
+$gutter: 0 2em;
 
 // styles
 body {
   margin: 0;
-  font-family: $serif;
-  letter-spacing: 2px;
+  font-family: $primary-font;
+  color: $primary-font-color;
+}
+
+h1, h2 {
+  font-family: $heading-font;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.menu-container {
+  position: fixed;
+  width: 100%
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-content {
+  // display: none;
+  width: 0;
+  opacity: 0;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    background-color: $yellow;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: all 1s;
+  }
+}
+
+.scroll-link {
+  padding: 1em;
+}
+
+.fa {
   color: $black;
 }
 
-.navbar {
-  top: 0;
-  margin: 20px 10px;
-  display: flex;
-  justify-content: space-between;
-  font-family: $sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $black;
-  }
-
-  a:hover {
-    color: $pink;
-  }
-
-  & .links > a {
-    padding-left: 25px;
-    font-size: 10px;
-    letter-spacing: 3px;
-  }
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.intro-container {
   height: 100vh;
+  padding: $gutter;
 }
 
-.about {
-  color: $white;
-  background-color: $green;
+.intro {
+  padding-top: 2em;
 
-  #intro {
-    max-width: 75vw;
+  @media screen and (min-width: $break-large) {
+    max-width: 60%;
   }
 }
 
-.resume {
-  background-color: $pink;
-
-  & a {
-    color: $dark-pink;
-  }
+.highlight {
+  background-color: $yellow;
 }
 
-.contact {
-  flex-wrap: wrap;
-  background-color: $dark-pink;
-  color: $white;
+.section {
+  min-height: 100vh;
 
-  & a {
-    padding-right: 20px;
-    color: $white;
-
-    &:hover {
-      color: $pink;
-    }
+  &--title {
+    background-color: $yellow;
+    padding: 1em 2em;
   }
-}
-
-#up-arrow {
-  display: none;
-  height: 0;
-  position: sticky;
-  top: 15px;
-  left: 100vw;
-  padding-right: 15px;
-  font-size: 30px;
-  color: $purple;
 }

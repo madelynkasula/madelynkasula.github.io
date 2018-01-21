@@ -1,27 +1,18 @@
 $(document).ready(() => {
-  const scrollOffset = 75
-  const sectionOffset = 45
+  
   const duration = 500
 
-  $(window).scroll(() => {
-    if ($(this).scrollTop() > scrollOffset) {
-      $('#up-arrow').fadeIn(duration)
-    } else {
-      $('#up-arrow').fadeOut(0)
-    }
-  })
-
-  $('#up-arrow').click((event) => {
-    $('html, body').animate({ scrollTop: 0 }, duration)
+  $(".menu-icon").click((event) => {
+    $(".menu-content").toggleClass("menu-content--active")
   })
 
   scrollTo = (event, id) => {
     event.preventDefault()
-    const scrollTop = $(id).position().top + sectionOffset
+    const scrollTop = $(id).position().top
     $('html, body').animate({ scrollTop }, duration)
   }
-
-  $('.links > a').click((event) => {
+  
+  $(".scroll-link").click((event) => {
     const scrollTarget = event.target.hash
     scrollTo(event, scrollTarget)
   })
