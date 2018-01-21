@@ -94,7 +94,7 @@ a {
   background-color: yellow; }
 
 .section {
-  min-height: 100vh; }
+  padding-bottom: 2em; }
   .section--title {
     background-color: yellow;
     padding: 1em 2em; }
@@ -102,15 +102,33 @@ a {
     padding: 1em 2em;
     font-family: "Playfair Display"; }
 
+.svg {
+  width: 240px;
+  height: 240px; }
+
+.line {
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 100px;
+  animation: draw 2s linear forwards; }
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0px; } }
 .grid {
   display: grid;
   grid-gap: 4em; }
   @media screen and (min-width: 1200px) {
     .grid {
       grid-template-columns: repeat(2, 1fr); } }
-  @media screen and (min-width: 1200px) {
-    .grid--skills {
-      grid-template-columns: repeat(4, 1fr); } }
+  .grid--icon {
+    align-self: center;
+    justify-self: center; }
+  .grid--subgrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2em; }
+    .grid--subgrid--sm {
+      grid-template-columns: repeat(2, 1fr); }
 
 .tags {
   display: flex;
