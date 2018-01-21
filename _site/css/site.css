@@ -11,29 +11,50 @@ h1 {
 
 .menu-container {
   position: fixed;
-  width: 100%; }
+  right: 0; }
 
 .menu {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  width: 0;
+  height: 100vh;
+  transition: all 1000ms; }
+  .menu--active {
+    background-color: rgba(0, 0, 0, 0.84);
+    width: 100vw; }
+    @media screen and (min-width: 1200px) {
+      .menu--active {
+        width: 350px; } }
+
+.menu-icon {
+  padding: 0.5em;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.84);
+  transition: all 1000ms; }
+  .menu-icon--active {
+    transform: rotateY(180deg);
+    color: #FFFFFF; }
 
 .menu-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
   width: 0;
-  opacity: 0; }
+  opacity: 0;
+  transition: all 500ms 200ms; }
   .menu-content--active {
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-    width: 100vw;
-    height: 100vh;
     opacity: 1;
-    transition: all 1s; }
+    width: 100%; }
 
 .scroll-link {
-  padding: 1em; }
-
-.fa {
-  color: rgba(0, 0, 0, 0.84); }
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  letter-spacing: 2; }
+  .scroll-link:hover {
+    background-color: yellow;
+    color: rgba(0, 0, 0, 0.84); }
 
 .intro-container {
   height: 100vh;

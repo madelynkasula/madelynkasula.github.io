@@ -1,6 +1,7 @@
 ---
 ---
 
+//// VARIABLES ////
 // breakpoints
 $break-large: 1200px;
 
@@ -14,10 +15,8 @@ $heading-font: 'Monserrat';
 $primary-font: 'Inconsolata';
 $primary-font-color: $black;
 
-// borders, gutters, etc.
-$gutter: 0 2em;
 
-// styles
+//// STYLES ////
 body {
   margin: 0;
   font-family: $primary-font;
@@ -34,41 +33,68 @@ h1 {
 
 .menu-container {
   position: fixed;
-  width: 100%
+  right: 0;
 }
 
 .menu {
   display: flex;
   justify-content: flex-end;
+  width: 0;
+  height: 100vh;
+  transition: all 1000ms;
+
+  &--active {
+    background-color: $black;
+    width: 100vw;
+
+    @media screen and (min-width: $break-large) {
+      width: 350px;
+    }
+  }
+}
+
+.menu-icon {
+  padding: 0.5em;
+  cursor: pointer;
+  color: $black;
+  transition: all 1000ms;
+
+  &--active {
+    transform: rotateY(180deg);
+    color: $white;
+  }
 }
 
 .menu-content {
-  // display: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
   width: 0;
   opacity: 0;
+  transition: all 500ms 200ms;
 
   &--active {
-    display: flex;
-    flex-direction: column;
-    background-color: $yellow;
-    width: 100vw;
-    height: 100vh;
     opacity: 1;
-    transition: all 1s;
+    width: 100%;
   }
 }
 
 .scroll-link {
-  padding: 1em;
-}
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: $white;
+  font-size: 1.2em;
+  letter-spacing: 2;
 
-.fa {
-  color: $black;
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+  }
 }
 
 .intro-container {
   height: 100vh;
-  padding: $gutter;
+  padding: 0 2em;
 }
 
 .intro {
