@@ -1,4 +1,7 @@
 $(document).ready(() => {
+
+  // for feather icons
+  feather.replace()
   
   const duration = 500
 

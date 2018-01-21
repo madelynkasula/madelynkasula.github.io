@@ -40,11 +40,13 @@ a {
       .menu--active {
         width: 350px; } }
   .menu--icon {
-    padding: 0.4em;
+    padding: 1em 0 0 1em;
+    flex-shrink: 0;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.84);
     transition: all 1000ms; }
     .menu--icon--active {
+      padding: 1em 1em 0 0;
       transform: rotateY(180deg);
       color: #F4F4F4; }
   .menu--content {
@@ -104,7 +106,12 @@ a {
 
 .svg {
   width: 240px;
-  height: 240px; }
+  height: 240px;
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.84);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
 
 .line {
   stroke-dasharray: 100px;
@@ -116,10 +123,11 @@ a {
     stroke-dashoffset: 0px; } }
 .grid {
   display: grid;
-  grid-gap: 4em; }
+  grid-gap: 2em; }
   @media screen and (min-width: 1200px) {
     .grid {
-      grid-template-columns: repeat(2, 1fr); } }
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4em; } }
   .grid--icon {
     align-self: center;
     justify-self: center; }
