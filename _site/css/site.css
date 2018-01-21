@@ -12,7 +12,8 @@ h1 {
 
 h3 {
   font-family: "Inconsolata";
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  font-weight: 400; }
 
 ul {
   list-style: none;
@@ -114,3 +115,17 @@ ul {
   @media screen and (min-width: 1200px) {
     .project-grid {
       grid-template-columns: repeat(2, 1fr); } }
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.tag {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: yellow;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.25em;
+  flex-shrink: 0; }
