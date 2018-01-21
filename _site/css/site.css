@@ -20,6 +20,9 @@ ul {
   padding: 0 1em;
   margin: 0; }
 
+a {
+  color: #00449E; }
+
 .menu-container {
   position: fixed;
   right: 0; }
@@ -101,13 +104,13 @@ ul {
 
 .grid {
   display: grid;
-  grid-gap: 2em; }
+  grid-gap: 4em; }
+  @media screen and (min-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); } }
   @media screen and (min-width: 1200px) {
     .grid--skills {
       grid-template-columns: repeat(4, 1fr); } }
-  @media screen and (min-width: 1200px) {
-    .grid--projects {
-      grid-template-columns: repeat(2, 1fr); } }
 
 .tags {
   display: flex;

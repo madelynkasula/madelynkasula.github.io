@@ -47,6 +47,10 @@ ul {
   margin: 0;
 }
 
+a {
+  color: #00449E;
+}
+
 
 // menu
 .menu-container {
@@ -170,17 +174,15 @@ ul {
 // skills and projects
 .grid {
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 4em;
+
+  @media screen and (min-width: $break-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   
   &--skills {
     @media screen and (min-width: $break-large) {
       grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  &--projects {
-    @media screen and (min-width: $break-large) {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
