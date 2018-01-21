@@ -2,10 +2,10 @@ $(document).ready(() => {
   
   const duration = 500
 
-  $(".menu-icon").click((event) => {
+  $(".menu--icon").click((event) => {
     $(".menu").toggleClass("menu--active")
-    $(".menu-content").toggleClass("menu-content--active")
-    $(".menu-icon").toggleClass("menu-icon--active")
+    $(".menu--content").toggleClass("menu--content--active")
+    $(".menu--icon").toggleClass("menu--icon--active")
   })
 
   scrollTo = (event, id) => {
@@ -14,7 +14,7 @@ $(document).ready(() => {
     $('html, body').animate({ scrollTop }, duration)
   }
   
-  $(".scroll-link").click((event) => {
+  $(".menu--link").click((event) => {
     const scrollTarget = event.target.hash
     scrollTo(event, scrollTarget)
   })
