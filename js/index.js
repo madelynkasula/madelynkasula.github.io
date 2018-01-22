@@ -36,9 +36,16 @@ $(document).ready(() => {
     const scrollTop = $(id).position().top
     $('html, body').animate({ scrollTop }, duration)
   }
+
+  closeMenu = () => {
+    $(".menu").removeClass("menu--active")
+    $(".menu--content").removeClass("menu--content--active")
+    $(".menu--icon").removeClass("menu--icon--active")
+  }
   
   $(".menu--link").click((event) => {
     const scrollTarget = event.target.hash
+    closeMenu()
     scrollTo(event, scrollTarget)
   })
 
