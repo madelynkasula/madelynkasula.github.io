@@ -133,7 +133,12 @@ a {
       grid-gap: 4em; } }
   .grid--icon {
     align-self: center;
-    justify-self: center; }
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 1; }
+    @media screen and (min-width: 1200px) {
+      .grid--icon {
+        grid-column: 2; } }
   .grid--subgrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
