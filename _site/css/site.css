@@ -23,13 +23,11 @@ ul {
 a {
   color: #00449E; }
 
-.menu-container {
-  position: fixed;
-  right: 0; }
-
 .menu {
+  position: fixed;
   display: flex;
   justify-content: flex-end;
+  right: 0;
   width: 0;
   height: 100vh;
   transition: all 1000ms; }
