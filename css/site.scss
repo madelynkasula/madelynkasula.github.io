@@ -187,7 +187,14 @@ a {
 .line {
   stroke-dasharray: 100px;
   stroke-dashoffset: 100px;
-  animation: draw 2s linear forwards;
+
+  &--active {
+    animation: draw 2s linear forwards;
+  }
+
+  &--delay {
+    animation-delay: 1000ms;
+  }
 }
 
 @keyframes draw {

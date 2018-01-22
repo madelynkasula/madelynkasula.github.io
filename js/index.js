@@ -1,16 +1,36 @@
 $(document).ready(() => {
 
+  // constants
+  const duration = 500
+  const background = {
+    header: $("#background"),
+    line: $(".background-line")
+  }
+  const skills = {
+    header: $("#skills"),
+    line: $(".skills-line")
+  }
+  const projects = {
+    header: $("#projects"),
+    line: $(".projects-line")
+  }
+  const community = {
+    header: $("#community"),
+    line: $(".community-line")
+  }
+  const sections = [background, skills, projects, community]
+
   // for feather icons
   feather.replace()
-  
-  const duration = 500
 
+  // toggle menu classes to open/close
   $(".menu--icon").click((event) => {
     $(".menu").toggleClass("menu--active")
     $(".menu--content").toggleClass("menu--content--active")
     $(".menu--icon").toggleClass("menu--icon--active")
   })
 
+  // scroll to section on click
   scrollTo = (event, id) => {
     event.preventDefault()
     const scrollTop = $(id).position().top
@@ -21,4 +41,23 @@ $(document).ready(() => {
     const scrollTarget = event.target.hash
     scrollTo(event, scrollTarget)
   })
+
+  // detect if element is in viewport
+  isInView = (el) => {
+    var elementTop = $(el).offset().top - 50
+    var elementBottom = elementTop + $(el).outerHeight()
+    var viewportTop = $(window).scrollTop()
+    var viewportBottom = viewportTop + $(window).height()
+
+    return viewportTop > elementTop && viewportBottom > elementBottom
+  }
+
+  $(window).scroll(() => {
+    sections.forEach((section) => {
+      if (isInView(section.header)) {
+        section.line.addClass("line--active")
+      }
+    })
+  })
+
 })
