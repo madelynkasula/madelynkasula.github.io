@@ -51,7 +51,7 @@ $(document).ready(() => {
 
   // detect if element is in viewport
   isInView = (el) => {
-    var elementTop = $(el).offset().top - 50
+    var elementTop = $(el).offset().top - 100
     var elementBottom = elementTop + $(el).outerHeight()
     var viewportTop = $(window).scrollTop()
     var viewportBottom = viewportTop + $(window).height()
