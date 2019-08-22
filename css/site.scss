@@ -2,22 +2,17 @@
 ---
 
 //// VARIABLES ////
-// breakpoints
-$break-large: 1200px;
-
 // colors
-$white: #F4F4F4;
+$white: #f4f4f4;
 $black: rgba(0, 0, 0, 0.84);
 $yellow: rgb(255, 255, 0);
 
 // fonts
-$serif: 'Playfair Display';
-$monospace: 'Inconsolata';
+$serif: "Playfair Display";
+$monospace: "Inconsolata";
 $light-weight: 400;
 $serif-bold-weight: 800;
 $monospace-bold-weight: 700;
-
-
 
 //// STYLES ////
 body {
@@ -27,226 +22,33 @@ body {
   background-color: $white;
 }
 
-h1, h2 {
-  font-family: $serif;
+#site {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
 }
 
 h1 {
-  font-size: 3em;
-}
-
-h3 {
-  font-family: $monospace;
-  font-size: 1.2em;
-  font-weight: $light-weight;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  font-size: 2em;
+  max-width: 75%;
+  text-align: center;
 }
 
 a {
-  color: #00449E;
-}
-
-
-// menu
-.menu {
-  position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  right: 0;
-  width: 0;
-  height: 100vh;
-  transition: all 1000ms;
-
-  &--active {
-    background-color: $black;
-    width: 100vw;
-
-    @media screen and (min-width: $break-large) {
-      width: 350px;
-    }
-  }
-
-  &--icon {
-    padding: 1em 0 0 1em;
-    flex-shrink: 0;
-    cursor: pointer;
-    color: $black;
-    transition: all 1000ms;
-
-    &--active {
-      padding: 1em 1em 0 0;
-      transform: rotateY(180deg);
-      color: $white;
-    }
-  }
-
-  &--content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1em;
-    width: 0;
-    opacity: 0;
-    transition: all 500ms 200ms;
-
-    &--active {
-      opacity: 1;
-      width: 100%;
-    }
-
-    &--nav {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &--social {
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 2em;
-
-      &--link {
-      color: $white;
-
-        &:hover {
-          color: $yellow;
-        }
-      }
-    }
-  }
-
-  &--link {
-    padding: 0.5em;
-    text-decoration: none;
-    color: $white;
-    font-size: 1.2em;
-    letter-spacing: 2;
-
-    &:hover {
-      background-color: $yellow;
-      color: $black;
-    }
-  }
-}
-
-
-// introduction
-.intro-container {
-  height: 100vh;
-  padding: 0 2em;
-}
-
-.intro {
-  padding-top: 2em;
-
-  @media screen and (min-width: $break-large) {
-    max-width: 60%;
-  }
+  color: #00449e;
+  text-decoration: none;
 }
 
 .highlight {
   background-color: $yellow;
-}
-
-
-// section
-.section {
-  padding-bottom: 2em;
-
-  &--title {
-    background-color: $yellow;
-    padding: 1em 2em;
-  }
-
-  &--content {
-   padding: 1em 2em;
-   font-family: $serif;
-  }
-}
-
-
-// svg
-.svg {
-  width: 240px;
-  height: 240px;
-  fill: none;
-  stroke: $black;
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.line {
-  stroke-dasharray: 100px;
-  stroke-dashoffset: 100px;
-
-  &--active {
-    animation: draw 2s linear forwards;
-  }
-
-  &--delay {
-    animation-delay: 1000ms;
-  }
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0px;
-  }
-}
-
-
-// grids
-.grid {
-  display: grid;
-  grid-gap: 2em;
-
-  @media screen and (min-width: $break-large) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4em;
-  }
-
-  &--icon {
-    align-self: center;
-    justify-self: center;
-    grid-column: 1;
-    grid-row: 1;
-
-    @media screen and (min-width: $break-large) {
-      grid-column: 2;
-    }
-  }
-  
-  &--subgrid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2em;
-
-    &--sm {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-
-
-// tags
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-
-  &--tag {
-    font-family: $monospace;
-    font-weight: $monospace-bold-weight;
-    text-transform: uppercase;
-    background-color: $yellow;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0.25em;
-    flex-shrink: 0;
-  }  
 }
